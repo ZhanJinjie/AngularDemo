@@ -1,0 +1,1 @@
+operation::exercises[snippets='http-request,path-parameters,response-body,response-fields']

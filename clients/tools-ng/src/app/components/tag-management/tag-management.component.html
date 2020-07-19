@@ -1,0 +1,33 @@
+<div class="p-grid">
+    <div class="p-col-2">
+        <h3>标签维度</h3>
+        <button pButton type="button" class="p-button-primary btn-menu" label="添加" (click)="addNewCategory"></button>
+        <button pButton type="button" class="p-button-primary btn-menu" [disabled]="!canEditCategory"
+            (click)="editCategory" label="修改">
+        </button>
+        <button pButton type="button" class="p-button-primary btn-menu" [disabled]="!canEditCategory"
+            (click)="deleteCategory" label="删除">
+        </button>
+        <p-listbox [(ngModel)]="selectedCategory" [options]="categories" optionLabel="name"
+            (onChange)="onTagCatSelected"></p-listbox>
+    </div>
+    <div class="p-col-10">
+        <!-- <p-table [value]="tagDefs" :selection.sync="selectedDef" selectionMode="single">
+            <ng-template pTemplate="header">
+                <div>
+                    <h3>标签列表</h3>
+                    <Button class="p-button-primary btn-menu" label="添加" (click)="addNewDef"></Button>
+                    <Button class="p-button-primary btn-menu" [disabled]="!canEditDef" label="修改"
+                        (click)="editDef"></Button>
+                    <Button class="p-button-primary btn-menu" [disabled]="!canEditDef" label="删除"
+                        (click)="deleteDef"></Button>
+                </div>
+            </ng-template>
+            <Column header="标签" field="name"></Column>
+            <Column header="说明" field="description"></Column>
+        </p-table> -->
+    </div>
+    <!-- <DlgTagCategory ref="dlgTagCategory" @on-ok="onCategoryEdited" /> -->
+    <!-- <DlgConfirm ref="dlgConfirm" /> -->
+    <!-- <DlgTagDefinition ref="dlgTagDefinition" /> -->
+</div>
